@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "https://fintrack-api-wn7l.onrender.com";
+const API = "https://fintrack-api-wn7l.onrender.com/api/recurring";
 
 const getToken = () => localStorage.getItem("token");
 
