@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:3000/api/split";
+const API = "https://fintrack-api-wn7l.onrender.com";
 
 // get token from localStorage (same like your other services)
 const getAuthHeaders = () => {

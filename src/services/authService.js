@@ -1,5 +1,5 @@
 import axios from "axios"
-const API="http://localhost:3000/api"
+const API="https://fintrack-api-wn7l.onrender.com"
 
 export const signupUser= async(userData)=>{
     return axios.post(`${API}/signup`,userData)

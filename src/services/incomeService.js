@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = 
-"http://localhost:3000/api/income";
+"https://fintrack-api-wn7l.onrender.com";
 
 const getToken = () => localStorage.getItem("token")?.trim()
 

@@ -1,5 +1,5 @@
 import axios from "axios"
-const API="http://localhost:3000/api/expenses"
+const API="https://fintrack-api-wn7l.onrender.com"
 
 const getToken=()=>localStorage.getItem("token")
 
