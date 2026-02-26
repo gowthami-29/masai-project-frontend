@@ -1,5 +1,5 @@
 import axios from "axios";
-const API="https://fintrack-api-wn7l.onrender.com"
+const API="https://fintrack-api-wn7l.onrender.com/api/budget"
 const getToken=()=>localStorage.getItem("token")
 
 //add
