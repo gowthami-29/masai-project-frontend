@@ -52,7 +52,7 @@ const navigate=useNavigate()
   try {
     const response = await loginUser(form)
     localStorage.setItem("token", response.data.token)
-    toast.success("Login sucessfull")
+    toast.success("Login sucessfully")
     navigate("/dashboard")
   } catch (error) {
 
