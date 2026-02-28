@@ -44,7 +44,7 @@ export default function SavingsGoals() {
     }
 
     setForm({ title: "", targetAmount: "", savedAmount: "" })
-     toast.success("Congratulationds! Goal achevied")
+   
   }
   
 
