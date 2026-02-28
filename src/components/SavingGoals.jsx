@@ -40,7 +40,7 @@ export default function SavingsGoals() {
 
     if (newGoal.savedAmount >= newGoal.targetAmount) {
       triggerCelebration()
-         toast.success("Congratulationds! Goal achevied")
+        
     }
 
     setForm({ title: "", targetAmount: "", savedAmount: "" })
