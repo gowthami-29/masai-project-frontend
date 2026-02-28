@@ -16,6 +16,7 @@ import TrendsDashboard from "./pages/TrendsDashboard";
 import Layout from "./layout/Layout";
 import Resources from "./pages/Resources";
 import SavingsGoals from "./components/SavingGoals";
+import { Toaster } from "sonner";
 
 
 function App(){
@@ -55,9 +56,11 @@ function App(){
   </Route>
 
 </Routes>
+<Toaster position="top-right" richColors/>
        
       </BrowserRouter>
     </AuthProvider>
+    
   )
 }
 export default App;

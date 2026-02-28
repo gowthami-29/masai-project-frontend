@@ -12,6 +12,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
+import { toast } from "sonner"
 
 export default function SplitForm({ expenseId, refresh }) {
   const [amount, setAmount] = useState("")
@@ -26,6 +27,7 @@ export default function SplitForm({ expenseId, refresh }) {
       split_type: "equal",
       participants: [{ name }],
     })
+    toast.success("Split expense added sucessfully")
 
     setAmount("")
     setName("")

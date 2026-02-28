@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Progress } from "@/components/ui/progress"
 import { Trash2 } from "lucide-react"
+import { toast } from "sonner"
 
 export default function SavingsGoals() {
   const [goals, setGoals] = useState([])
@@ -35,13 +36,17 @@ export default function SavingsGoals() {
     }
 
     setGoals([...goals, newGoal])
+ 
 
     if (newGoal.savedAmount >= newGoal.targetAmount) {
       triggerCelebration()
+         toast.success("Congratulationds! Goal achevied")
     }
 
     setForm({ title: "", targetAmount: "", savedAmount: "" })
+     toast.success("Congratulationds! Goal achevied")
   }
+  
 
   const handleDelete = (id) => {
     setGoals(goals.filter((goal) => goal.id !== id))

@@ -9,6 +9,7 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card"
+import { toast } from "sonner"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
@@ -60,7 +61,7 @@ const navigate=useNavigate()
     try {
       const response=await signupUser(form)
      console.log(response.data);
-     
+     toast.success("Account created sucessfully")
       navigate("/login")
       
       

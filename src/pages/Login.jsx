@@ -13,6 +13,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
 import { loginUser } from "@/services/authService"
+import { toast } from "sonner"
 
 export default function Login() {
   const [form, setForm] = useState({
@@ -51,8 +52,10 @@ const navigate=useNavigate()
   try {
     const response = await loginUser(form)
     localStorage.setItem("token", response.data.token)
+    toast.success("Login sucessfull")
     navigate("/dashboard")
   } catch (error) {
+
     setErrors({ api: "Invalid email or password" })
   }
 }

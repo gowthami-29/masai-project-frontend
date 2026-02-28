@@ -20,6 +20,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { toast } from "sonner"
 function BudgetForm({ refresh }) {
   const [form, setForm] = useState({
     category: "",
@@ -30,6 +31,7 @@ function BudgetForm({ refresh }) {
   const handleSubmit = async (e) => {
     e.preventDefault()
     await addBudget(form)
+    toast.success("Budget created sucessfully")
     refresh()
     setForm({ category: "", amount: "", month: "" })
   }

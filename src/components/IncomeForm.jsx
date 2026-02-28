@@ -21,6 +21,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { toast } from "sonner"
 
 function IncomeForm({ refresh }) {
   const [form, setForm] = useState({
@@ -33,6 +34,7 @@ function IncomeForm({ refresh }) {
     e.preventDefault()
 
     await addIncome(form)
+    toast.success("Income added sucessfully")
     refresh()
 
     setForm({

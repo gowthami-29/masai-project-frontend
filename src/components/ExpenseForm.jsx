@@ -21,6 +21,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { toast } from "sonner"
 export default function ExpenseForm({ fetchExpenses, expenses, budgets }) {
   const [form, setForm] = useState({
     title: "",
@@ -56,6 +57,7 @@ export default function ExpenseForm({ fetchExpenses, expenses, budgets }) {
         ? form.tags.split(",").map((t) => t.trim())
         : [],
     })
+    toast.success("Expense added successfully")
 
     fetchExpenses()
 

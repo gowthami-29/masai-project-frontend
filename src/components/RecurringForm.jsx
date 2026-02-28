@@ -20,6 +20,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { toast } from "sonner"
 function RecurringForm({ refresh }) {
   const [form, setForm] = useState({
     title: "",
@@ -32,6 +33,7 @@ function RecurringForm({ refresh }) {
   const handleSubmit = async (e) => {
     e.preventDefault()
     await addRecurring(form)
+    toast.success("Recurring payment added")
     refresh()
 
     setForm({
