@@ -1,5 +1,6 @@
-# 💰 FinTrack – Personal Finance Management App
-## 📌 Project Title
+
+💰 FinTrack – Personal Finance Management App
+📌 Project Title
 FinTrack – Smart Personal Finance Tracker
 📖 Project Description
 FinTrack is a full-stack personal finance management application that allows users to:
@@ -52,9 +53,12 @@ Copy code
 npm run dev
 🌐 Deployment Link
 Frontend Live URL:
-👉https://myfinancestrack.netlify.app/
+👉 https://your-netlify-link.netlify.app⁠�
 🔗 Backend API Link
-👉 https://dashboard.render.com/web/srv-d6g68qs50q8c73edm5dg
+👉 https://your-backend-url.onrender.com⁠�
+🔑 Login Credentials (For Testing)
+Email: test@gmail.com
+Password: 123456
 📸 Screenshots
 (Add screenshots here)
 Dashboard
@@ -65,3 +69,21 @@ Split Expense Page
 Budget Page
 🎥 Video Walkthrough
 👉 Add your Google Drive / YouTube video link here
+🚀 Important Notes
+Each user can only see their own data
+Secure JWT authentication implemented
+Backend filters data using user_id
+Deployed using modern cloud platforms
+🎯 What You Should Do Now
+Replace:
+your-username
+netlify link
+backend link
+Add screenshots
+Add video link
+Push to GitHub
+If you want, I can also:
+✔ Make a more professional GitHub-style README
+✔ Help you write backend README
+✔ Help you create a demo video script
+Tell me what you need next 🚀
