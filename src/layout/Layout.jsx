@@ -5,6 +5,7 @@ import { Separator } from "@/components/ui/separator"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { ThemeToggle } from "@/pages/ThemeToggle"
 import { cn } from "@/lib/utils"
+import { toast } from "sonner"
 import {
   LayoutDashboard,
   Wallet,
@@ -32,6 +33,7 @@ export default function Layout() {
 
   const handleLogout = () => {
     localStorage.removeItem("token")
+    toast.success("Logged out successfully 👋")
     navigate("/login")
   }
 
@@ -89,6 +91,7 @@ export default function Layout() {
           variant="destructive"
           className="w-full justify-start gap-2"
           onClick={handleLogout}
+          
         >
           <LogOut className="h-4 w-4" />
           Logout
@@ -107,7 +110,7 @@ export default function Layout() {
     </aside>
 
     {/* Main Section */}
-    <div className="flex flex-col flex-1 md:ml-64">
+    <div className="flex flex-col flex-1 bg-fuchsia-100 md:ml-64">
 
       {/* Header */}
       <header className="sticky top-0 z-40 flex items-center justify-between 

@@ -34,7 +34,7 @@ function IncomeForm({ refresh }) {
     e.preventDefault()
 
     await addIncome(form)
-    toast.success("Income added sucessfully")
+    toast.success("Income added successfully 💰")
     refresh()
 
     setForm({

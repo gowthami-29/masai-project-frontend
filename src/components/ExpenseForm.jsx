@@ -57,7 +57,7 @@ export default function ExpenseForm({ fetchExpenses, expenses, budgets }) {
         ? form.tags.split(",").map((t) => t.trim())
         : [],
     })
-    toast.success("Expense added successfully")
+    toast.success("Expense added successfully 🧾")
 
     fetchExpenses()
 

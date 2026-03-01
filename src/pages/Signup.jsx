@@ -61,7 +61,7 @@ const navigate=useNavigate()
     try {
       const response=await signupUser(form)
      console.log(response.data);
-     toast.success("Account created sucessfully")
+  toast.success("Account created successfully 🎉")
       navigate("/login")
       
       

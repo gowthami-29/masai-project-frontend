@@ -54,6 +54,7 @@ function IncomeList({ refreshKey }) {
 
   const handleUpdate = async () => {
     await updateIncome(editId, editData)
+    
     setEditId(null)
     fetchIncome()
   }

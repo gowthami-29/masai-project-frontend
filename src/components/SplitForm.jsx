@@ -27,7 +27,7 @@ export default function SplitForm({ expenseId, refresh }) {
       split_type: "equal",
       participants: [{ name }],
     })
-    toast.success("Split expense added sucessfully")
+    toast.success("Expense split successfully 👥")
 
     setAmount("")
     setName("")

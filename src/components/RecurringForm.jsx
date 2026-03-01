@@ -33,7 +33,7 @@ function RecurringForm({ refresh }) {
   const handleSubmit = async (e) => {
     e.preventDefault()
     await addRecurring(form)
-    toast.success("Recurring payment added")
+    toast.success("Recurring transaction created 🔁")
     refresh()
 
     setForm({

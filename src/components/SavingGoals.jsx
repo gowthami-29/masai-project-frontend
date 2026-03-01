@@ -40,6 +40,7 @@ export default function SavingsGoals() {
 
     if (newGoal.savedAmount >= newGoal.targetAmount) {
       triggerCelebration()
+   toast.success("Savings goal created successfully 🏦")
         
     }
 
