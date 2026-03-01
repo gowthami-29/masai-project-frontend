@@ -34,7 +34,7 @@ export default function ExpenseSummary(){
         fetchMonthly();
     },[]);
     return (
-  <div className="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200 p-8">
+  <div className="min-h-screen bg-linear-to-br from-slate-100 to-slate-200 p-8">
     
     <div className="max-w-4xl mx-auto space-y-8">
 

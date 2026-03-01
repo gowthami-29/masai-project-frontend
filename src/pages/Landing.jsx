@@ -11,13 +11,13 @@ import {
   CardDescription,
 } from "@/components/ui/card"
 
-import { Wallet, PiggyBank, BarChart3, ShieldCheck } from "lucide-react"
+import { Wallet, PiggyBank, BarChart3,  } from "lucide-react"
 
 function Home() {
   const { user } = useContext(AuthContext)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-700 via-purple-700 to-blue-800 text-white">
+    <div className="min-h-screen bg-linear-to-br from-indigo-700 via-purple-700 to-blue-800 text-white">
 
       {/* Navbar */}
       <div className="flex justify-between items-center px-10 py-6 backdrop-blur-md bg-white/5">
