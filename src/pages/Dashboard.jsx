@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import ExpenseChart from "../components/ExpenseChart"
 import { getExpensesSummary } from "../services/summariService"
-import { getAIInsights} from "../services/aiService"
+import { getAIInsight} from "../services/aiService"
 import {
   Card,
   CardContent,
@@ -27,7 +27,7 @@ export default function Dashboard() {
         expenses:res.data.totalExpense,
         categories:Object.keys(res.data.categoryBreakdown).join(", ")
       }
-      const aiRes=await getAIInsights(aiData)
+      const aiRes=await getAIInsight(aiData)
       console.log(aiRes);
       
       setAiAdvice(aiRes.insights)
