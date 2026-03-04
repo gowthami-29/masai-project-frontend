@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import ExpenseChart from "../components/ExpenseChart"
 import { getExpensesSummary } from "../services/summariService"
-
+import { getAIInsights} from "../services/aiService"
 import {
   Card,
   CardContent,
@@ -16,11 +16,21 @@ export default function Dashboard() {
     totalExpense: 0,
     categoryBreakdown: {},
   })
+  const [aiAdvice,setAiAdvice]=useState("")
 
   const fetchSummary = async () => {
     try {
       const res = await getExpensesSummary()
       setSummary(res.data)
+      const aiData={
+        income:res.data.totalIncome,
+        expenses:res.data.totalExpense,
+        categories:Object.keys(res.data.categoryBreakdown).join(", ")
+      }
+      const aiRes=await getAIInsights(aiData)
+      console.log(aiRes);
+      
+      setAiAdvice(aiRes.insights)
     } catch (error) {
       console.log(error)
     }
@@ -29,6 +39,7 @@ export default function Dashboard() {
   useEffect(() => {
     fetchSummary()
   }, [])
+  
 
   const balance =
     (summary.totalIncome || 0) - (summary.totalExpense || 0)
@@ -108,6 +119,18 @@ export default function Dashboard() {
             <ExpenseChart summary={summary} />
           </CardContent>
         </Card>
+        {/*ai */}
+        <Card className="shadow-xl rounded-2xl mt-6">
+  <CardHeader>
+    <CardTitle>AI Financial Advisor 🤖</CardTitle>
+  </CardHeader>
+
+  <CardContent>
+    <p className="text-sm whitespace-pre-line">
+      {aiAdvice || "Generating insights..."}
+    </p>
+  </CardContent>
+</Card>
 
       </div>
     </div>
