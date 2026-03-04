@@ -30,7 +30,7 @@ export default function Dashboard() {
       const aiRes=await getAIInsight(aiData)
       console.log(aiRes);
       
-      setAiAdvice(aiRes.insights)
+      setAiAdvice(aiRes.data.insights)
     } catch (error) {
       console.log(error)
     }
