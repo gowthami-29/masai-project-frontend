@@ -4,7 +4,7 @@ const API="https://fintrack-api-wn7l.onrender.com/api/summary"
 const getToken=()=>localStorage.getItem("token")
 
 export const getExpenseSummary=()=>{
-    return axios.get(`${API}/summary`,{
+    return axios.get(`${API}`,{
         headers:{
             Authorization:`Bearer ${getToken()}`
         }
@@ -12,7 +12,7 @@ export const getExpenseSummary=()=>{
 };
 
 export const getMonthlySummary=()=>{
-    return axios.get(`${API}/monthly-summary`,{
+    return axios.get(`${API}`,{
         headers:{
             Authorization:`Bearer ${getToken()}`
         }
